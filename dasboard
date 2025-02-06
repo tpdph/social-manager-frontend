@@ -1,0 +1,17 @@
+// frontend/components/Dashboard.js
+import { useState } from 'react';
+import MetricCard from './MetricCard';
+
+const Dashboard = () => {
+  const [mockData] = useState({
+    instagram: { followers: 2500, likes: 12000 },
+    telegram: { bots: 3, activeGroups: 5 }
+  });
+
+  return (
+    <div>
+      <MetricCard title="Instagram Followers" value={mockData.instagram.followers} />
+      <MetricCard title="Telegram Bots" value={mockData.telegram.bots} />
+    </div>
+  );
+};
